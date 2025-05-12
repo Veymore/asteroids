@@ -47,6 +47,9 @@ def main() -> None:
             if object.checkCollision(player_1):
                 print("Game over!")
                 exit()
+            for shot in shots:
+                if object.checkCollision(shot):
+                    object.kill()
         for object in updatable:
             object.update(dt)
         screen.fill((0, 0, 0))  # black
