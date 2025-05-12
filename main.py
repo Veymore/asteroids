@@ -49,7 +49,7 @@ def main() -> None:
                 exit()
             for shot in shots:
                 if object.checkCollision(shot):
-                    object.kill()
+                    object.split()
         for object in updatable:
             object.update(dt)
         screen.fill((0, 0, 0))  # black
